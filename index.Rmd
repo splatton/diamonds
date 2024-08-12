@@ -1,0 +1,19 @@
+---
+title: "Diamonds"
+output: html_document
+date: "`r Sys.time()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(ggplot2)
+```
+
+This is an R markdown plot of the diamonds data. For use on Github Pages. Test.
+
+```{r}
+#Load diamonds
+data("diamonds")
+ggplot(diamonds, aes(x = carat, y = price, color = color)) + geom_point()
+```
+
